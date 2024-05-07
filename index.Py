@@ -1,14 +1,16 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
-
 @app.route('/')
 def principal():
-    return "Bienvenidos internautas a la página del mejor jugador de Arena"
+    return render_template('index.html')
 
 @app.route('/contacto')
 def contacto():
     return "contactos"
+
+if __name__ == '__main__':
+    app.run(debug=True, host='127.0.0.2', port=3500)
+
+ 
