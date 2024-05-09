@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="https://cms-assets.tutsplus.com/uploads/users/30/posts/16037/preview_image/flask.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Falta la línea del boostrap -->
     <title>Mi primer Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
-<body>
+<body class="container-in">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Navbar</a>
@@ -18,18 +21,19 @@
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/templates/contacto.html">Contacto</a>
+                        <a class="nav-link" href="{{ url_for('contacto')}}">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/templates/curiosidades.html">Curiosidades</a>
+                        <a class="nav-link" href="{{ url_for('curiosidades')}}">Curiosidades</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container-in-1">
         {%block body%}
-        <h1>Estamos en contacto</h1>
+        <h2>Estamos en contacto</h2>
+        <h1 class="title-in">Bienvenidos a <i class="title-in-1">Flask</i></h1>
         {%endblock%}
     </div>
 </body>
