@@ -1,13 +1,3 @@
 .container-in{
     background-color: #ff8000;
 }
-
-.title-in{
-    text-align: center;
-}
-
-.title-in-1{
-    font-weight: 700;
-    transform: scale(1.3);
-    transition: 1.5s;
-}
