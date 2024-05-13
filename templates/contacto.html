@@ -1,13 +1,13 @@
-{% extends "layout.html" %}
-{% block title %}Index{% endblock %}
-{% block head %}
-  {{ super() }}
-  <style type="text/css">
-    .important { color: #336699; }
-  </style>
+{% extends './index.html' %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block extra_head %}
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2020/08/01/15/43/phone-5455660_1280.png">
 {% endblock %}
-{% block content %}
-  <h1>Index</h1>
-  <p class="important">
-    Welcome on my awesome homepage.
+
+{% block body %}
+<h1>
+    contactame
+</h1>
 {% endblock %}
